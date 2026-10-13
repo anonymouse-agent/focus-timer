@@ -71,6 +71,7 @@ Status: **CONFIRMED** (Gate D character-first revision approved, 2026-10-13)
 
 | AC-063 | FR-029 | Successful command feedback disappears within three seconds, repeated messages restart that interval, and feedback never intercepts clicks; error feedback remains readable for six seconds. |
 | AC-064 | NFR-014 | Packaging produces an x64 assisted current-user installer and a portable ZIP with matching SHA-256 checksums and bundled code/art licenses. A normal install creates working Start menu and desktop shortcuts, launches the app, and uninstalls cleanly without deleting the selected Markdown folder, settings, or unresolved-session recovery state. |
+| AC-065 | NFR-019 | A release tag is rejected when its version differs from `package.json`; a matching tag runs tests and packaging from clean source, generates post-package SHA-256 files, and publishes all four files as a GitHub pre-release. Signing remains disabled and visibly documented until provider approval. |
 
 ## Automated strategy
 
@@ -91,7 +92,7 @@ Status: **CONFIRMED** (Gate D character-first revision approved, 2026-10-13)
 - Resource profiling and runtime network tracing.
 - Eight-hour Windows soak including suspend/resume and forced process termination.
 
-Release requires recorded evidence for AC-001–AC-064; tests that require real Windows conditions cannot be replaced by unit assertions.
+Release requires recorded evidence for AC-001–AC-065; tests that require real Windows conditions cannot be replaced by unit assertions.
 
 ## Evidence snapshot — 2026-10-14
 

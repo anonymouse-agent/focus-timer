@@ -63,6 +63,6 @@ Add native notifications, independent sound, notification activation, power-resu
 
 ## M5 — Hardening and release
 
-Run failure injection, performance profiling, accessibility review, network verification, randomized transitions, and real-time soak. Produce a Windows x64 assisted installer and portable ZIP, checksums, usage instructions, backup guidance, known limitations, and an evidence matrix for AC-001–AC-064.
+Run failure injection, performance profiling, accessibility review, network verification, randomized transitions, and real-time soak. Produce a Windows x64 assisted installer and portable ZIP, checksums, usage instructions, backup guidance, known limitations, and an evidence matrix for AC-001–AC-065. Publish releases from matching version tags; integrate SignPath signing after provider approval.
 
 Manual acceptance and the eight-hour soak remain release gates even when the implementation and automated suite are complete. The pre-redesign ZIP is superseded and must not be presented as the character-first release.

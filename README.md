@@ -10,7 +10,7 @@ Focus Timer is a small Windows focus timer. The character is the clock, not deco
 
 ## Download
 
-Beta downloads will be published on the [GitHub Releases page](https://github.com/anonymouse-agent/focus-timer/releases). For most people, the `Focus-Timer-Setup` `.exe` is the simplest option. A portable ZIP is also provided.
+Download the current beta from the [GitHub Releases page](https://github.com/anonymouse-agent/focus-timer/releases). For most people, the `Focus-Timer-Setup` `.exe` is the simplest option. A portable ZIP is also provided.
 
 Neither build requires Node.js, npm, Git, or a GitHub account. Current beta builds are unsigned, so Windows may show a SmartScreen warning.
 
@@ -93,6 +93,8 @@ Source code and documentation are licensed under the [MIT License](LICENSE).
 Character artwork, the app icon, mockups, and screenshots are licensed under [CC BY 4.0](ASSET_LICENSE.md).
 
 Third-party dependencies keep their own licenses.
+
+See the [privacy policy](PRIVACY.md), [security policy](SECURITY.md), and [code-signing policy](docs/CODE_SIGNING_POLICY.md). The current beta is unsigned while the project applies for open-source signing.
 
 ## Contributing
 

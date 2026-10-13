@@ -22,3 +22,4 @@ Status: **CONFIRMED** (Gate C character-first revision approved, 2026-10-13)
 | NFR-016 | Every primary or secondary control has a semantic role, accessible name, keyboard path, and a visible focus treatment independent of the artwork. |
 | NFR-017 | Window restoration, expansion, display removal, and DPI changes keep the character and its menu reachable in a visible work area. |
 | NFR-018 | Production character assets use low-resolution masters with nearest-neighbor scaling and do not contain authoritative task, time, state, or control text. |
+| NFR-019 | Public release artifacts are built from a source tag whose version matches `package.json`. Build actions are immutable-pinned, signing credentials never enter the repository, and checksums are generated only after the final signing step. Unsigned releases are labelled clearly. |

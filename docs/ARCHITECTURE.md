@@ -96,4 +96,6 @@ Electron's per-user single-instance lock elects the owner. A secondary launch se
 
 ## Packaging
 
-The beta release is unsigned and may trigger Windows reputation warnings. electron-builder produces an assisted NSIS installer for the current user and a portable ZIP. The installer does not remove Electron user data or the user-selected Markdown folder during uninstall. Both packages include usage, backup, limitation, code-license, and artwork-license notes and receive separately generated SHA-256 files. Code signing and automatic updates are deferred.
+The beta release is unsigned and may trigger Windows reputation warnings. electron-builder produces an assisted NSIS installer for the current user and a portable ZIP. The installer does not remove Electron user data or the user-selected Markdown folder during uninstall. Both packages include usage, backup, limitation, code-license, and artwork-license notes.
+
+Matching version tags run a pinned GitHub Actions Windows build and publish a pre-release. SHA-256 files are generated from the final artifacts. The project will integrate SignPath Foundation signing only after provider approval; the signing key will not enter the repository or ordinary build secrets. Automatic updates remain deferred.

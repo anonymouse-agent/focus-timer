@@ -39,6 +39,7 @@ Status: living record
 
 | DEC-033 | CONFIRMED | Treat command confirmations as transient, click-through feedback rather than durable UI. Successes dismiss after 2.4 seconds; errors remain for 6 seconds, while durable failure states continue to use the attached panel. |
 | DEC-034 | CONFIRMED | Distribute the beta as an assisted, current-user NSIS installer plus a portable ZIP. The installer defaults to no-admin per-user installation, permits choosing the install directory, creates Start menu and desktop shortcuts, bundles code/art licenses, and must leave Markdown history, settings, and recovery state untouched on uninstall. Signing and automatic updates remain deferred. |
+| DEC-035 | CONFIRMED | Publish releases from matching version tags through a pinned GitHub Actions Windows build. Publish `0.1.0-beta.1` as an explicitly unsigned bootstrap release, apply for the SignPath Foundation open-source program, and enable signing only after provider approval. Generate checksums after the final signing step. Microsoft Store distribution remains a later option. |
 
 ## Source note
 
