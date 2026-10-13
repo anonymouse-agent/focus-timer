@@ -16,4 +16,6 @@ Tina Huang and Pixel Pomodoro are mentioned only to describe the product's inspi
 
 ## License
 
-Artwork licensing is documented separately from the source-code license.
+Character artwork, the app icon, mockups, and screenshots are licensed under CC BY 4.0. See [`ASSET_LICENSE.md`](../ASSET_LICENSE.md).
+
+Source code and other documentation are licensed under the MIT License.

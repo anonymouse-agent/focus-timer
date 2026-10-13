@@ -86,6 +86,14 @@ Manual Windows checks are tracked in [docs/ACCEPTANCE_TESTS.md](docs/ACCEPTANCE_
 
 The compact workflow was inspired by Tina Huang's Pixel Pomodoro demonstration. Focus Timer is an independent implementation with original code and original character artwork. It is not affiliated with or endorsed by Tina Huang.
 
+## License
+
+Source code and documentation are licensed under the [MIT License](LICENSE).
+
+Character artwork, the app icon, mockups, and screenshots are licensed under [CC BY 4.0](ASSET_LICENSE.md).
+
+Third-party dependencies keep their own licenses.
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). Please report security issues through the private process in [SECURITY.md](SECURITY.md).
