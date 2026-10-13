@@ -33,7 +33,7 @@ Changes must preserve these guarantees:
 - Final Markdown records are append-only.
 - Saving the same session twice cannot create two records.
 - Sleep counts while a timer is running. Paused time does not.
-- Uncertain recovery or file writes must be shown to the user instead of guessed away.
+- If recovery data or a file write is unclear, show an error and ask the user what to do. Do not guess.
 
 Read [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) before changing process boundaries, persistence, timing, or the Markdown format.
 

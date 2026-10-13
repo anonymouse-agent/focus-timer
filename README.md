@@ -1,12 +1,12 @@
 # Focus Timer
 
-Focus Timer is a small Windows focus timer. The character is the clock, not decoration around a separate timer window.
+Focus Timer is a simple Windows timer for focused work. Enter a task, choose how long you want to focus, and start the timer. A small character shows how much time is left while you use other apps.
 
 | Ready | Focusing |
 |---|---|
 | ![Focus Timer ready to start](docs/images/focus-timer-idle.png) | ![Focus Timer running](docs/images/focus-timer-running.png) |
 
-> Status: public beta. The core timer and local Markdown storage work, but the Windows release still needs manual accessibility, notification, sleep/wake, and soak testing.
+> This is an early public beta. The timer and Markdown saving work, but I am still testing accessibility, notifications, sleep and wake behavior, and long-running sessions.
 
 ## Install in a few minutes
 
@@ -18,21 +18,21 @@ You do not need Node.js, Git, a GitHub account, or any programming experience.
 4. Open the downloaded file and follow the installer. The default options are fine.
 5. Start **Focus Timer** from the Start menu or desktop shortcut.
 
-The current beta is not code-signed yet. If Windows shows **Windows protected your PC**, first confirm that the download came from this GitHub repository. Then select **More info** followed by **Run anyway**.
+The current beta is not code-signed yet. Windows may show **Windows protected your PC** when you open it. Make sure you downloaded the installer from this repository, then click **More info** and **Run anyway**.
 
 For first-run help, portable setup, and uninstall steps, see [Getting started](GETTING_STARTED.md).
 
 ## Features
 
-- Named focus sessions from 1 to 240 minutes
+- Focus sessions from 1 to 240 minutes
 - Pause, resume, cancel, and finish early
-- Avocado, cat, dog, and tomato characters
-- Always-on-top mode, enabled by default
-- Recovery after an exit, crash, or restart
-- Optional accomplishment notes
-- Append-only daily Markdown files
-- Independent sound and Windows notification settings
-- No account, sync, telemetry, or runtime network access
+- Four characters: avocado, cat, dog, and tomato
+- An always-on-top mode that starts enabled
+- Session recovery after an exit, crash, or restart
+- An optional note about what you accomplished
+- Daily Markdown files that you can read without the app
+- Separate settings for sound and Windows notifications
+- No account, ads, analytics, cloud sync, or internet connection
 
 ## Start your first focus session
 
@@ -45,17 +45,17 @@ For first-run help, portable setup, and uninstall steps, see [Getting started](G
 
 That is all the setup required. Focus Timer remembers the folder and your settings for next time.
 
-Completed sessions are saved in files such as `2026-10-14.md`. They are normal Markdown files that can be opened with Notepad or any text editor.
+Focus Timer saves completed sessions in files such as `2026-10-14.md`. You can open them with Notepad or any other text editor.
 
 ## Data and privacy
 
-Session history belongs to the user. Focus Timer never edits or deletes a finalized session record.
+Your session history stays on your computer. Focus Timer never changes or deletes a session after saving it.
 
 Back up the folder selected during setup. App settings and unfinished-session recovery data are stored under `%LOCALAPPDATA%\FocusTimer`.
 
-Do not edit `focus-timer:session` markers while a failed save is waiting to be retried. The app blocks uncertain writes instead of risking a duplicate record.
+If a save fails, leave the `focus-timer:session` markers alone until you retry. Focus Timer stops when it cannot safely write a file instead of risking a duplicate entry.
 
-## Development
+## Run from source
 
 Requirements:
 
@@ -75,13 +75,13 @@ npm run dev
 npm run package:win
 ```
 
-Build output is written to `release/` and is not committed to Git. It includes an assisted current-user installer and a portable ZIP. Current builds are unsigned, so Windows may show a SmartScreen warning.
+The build goes into `release/` and is not committed to Git. It includes a normal Windows installer and a portable ZIP. Current builds are unsigned, so Windows may show a SmartScreen warning.
 
 ## Tests
 
 `npm run verify` runs TypeScript checks, 50 automated tests, and a production build.
 
-Manual Windows checks are tracked in [docs/ACCEPTANCE_TESTS.md](docs/ACCEPTANCE_TESTS.md). They include accessibility, notifications, sleep/wake behavior, performance, network tracing, recovery testing, and an eight-hour soak.
+I track the remaining Windows checks in [docs/ACCEPTANCE_TESTS.md](docs/ACCEPTANCE_TESTS.md). These cover accessibility, notifications, sleep and wake behavior, performance, network activity, recovery, and an eight-hour test run.
 
 ## Project layout
 
@@ -94,7 +94,7 @@ Manual Windows checks are tracked in [docs/ACCEPTANCE_TESTS.md](docs/ACCEPTANCE_
 
 ## Inspiration
 
-The compact workflow was inspired by Tina Huang's Pixel Pomodoro demonstration. Focus Timer is an independent implementation with original code and original character artwork. It is not affiliated with or endorsed by Tina Huang.
+Tina Huang's Pixel Pomodoro demonstration inspired the original idea. I wrote this app from scratch and used original character artwork. Tina Huang is not involved with or affiliated with this project.
 
 ## License
 

@@ -1,6 +1,6 @@
 # Privacy Policy
 
-Focus Timer is an offline desktop application.
+Focus Timer is an offline Windows app. It keeps your data on your computer.
 
 ## Data the app stores
 
@@ -12,17 +12,17 @@ Focus Timer stores:
 
 The exact formats and locations are documented in [docs/DATA_SPEC.md](docs/DATA_SPEC.md).
 
-## Data the app sends
+## What leaves your computer
 
-Focus Timer does not transfer information to other computers or network services. It has no account, analytics, telemetry, advertising, cloud synchronization, or automatic updater.
+Focus Timer does not send your data anywhere. It has no account, analytics, telemetry, advertising, cloud sync, or automatic updater.
 
-Windows may handle local notifications and sound. A folder selected by the user may be synchronized by other software, but Focus Timer does not control or configure that synchronization.
+Windows handles the app's notifications and sound. If you choose a folder managed by OneDrive, Dropbox, or another sync tool, that tool may upload the files. Focus Timer does not set up or control that sync.
 
 ## Data ownership and deletion
 
-The user owns the Markdown files created by Focus Timer. The app never edits or deletes finalized session records. Uninstalling the app does not delete the selected Markdown folder, settings, or unresolved-session recovery data.
+You own the Markdown files created by Focus Timer. The app never changes or deletes a completed session. Uninstalling the app does not delete your Markdown folder, settings, or unfinished-session recovery data.
 
-Users can delete those files themselves at any time. Deleting unfinished-session recovery data can make an incomplete session impossible to restore.
+You can delete those files yourself at any time. If you delete recovery data for an unfinished session, Focus Timer may not be able to restore it.
 
 ## Security reports
 

@@ -2,7 +2,7 @@
 
 ## Supported versions
 
-Focus Timer is currently a development candidate. Security fixes are applied to the latest release only.
+Focus Timer is currently in public beta. I apply security fixes to the latest release only.
 
 ## Report a vulnerability
 
@@ -20,6 +20,6 @@ Do not include real task names, accomplishment notes, personal paths, credential
 
 ## Security model
 
-Focus Timer is an offline app. It does not need an account and does not intentionally make runtime network requests.
+Focus Timer works offline. It does not need an account and does not make network requests while running.
 
-Completed sessions are Markdown files in a folder selected by the user. Settings and unfinished-session recovery data are stored locally in the app's Windows user-data directory.
+The app saves completed sessions as Markdown in the folder you choose. It keeps settings and unfinished-session recovery data in the local Windows app-data folder.

@@ -1,8 +1,8 @@
 # Getting started with Focus Timer
 
-Focus Timer is made for Windows 11. You do not need a GitHub account or any developer tools.
+Focus Timer runs on Windows 11. You do not need a GitHub account or any developer tools.
 
-## Recommended: use the installer
+## Install the app
 
 1. Go to the [Focus Timer releases page](https://github.com/anonymouse-agent/focus-timer/releases).
 2. Open the newest release.
@@ -13,36 +13,36 @@ Focus Timer is made for Windows 11. You do not need a GitHub account or any deve
    The version numbers may be different in a newer release.
 
 4. Open the downloaded file.
-5. Follow the installer. The default choices are fine.
+5. Follow the installer. You can keep the default options.
 6. When installation finishes, open **Focus Timer**.
 
 ### If Windows shows a warning
 
 The current beta is not code-signed yet, so Windows may show **Windows protected your PC**.
 
-Only continue if you downloaded Focus Timer from:
+Only continue if you downloaded Focus Timer from this address:
 
 `https://github.com/anonymouse-agent/focus-timer`
 
 Then:
 
-1. Select **More info**.
+1. Click **More info**.
 2. Check that the app name is Focus Timer.
-3. Select **Run anyway**.
+3. Click **Run anyway**.
 
 If the download came from anywhere else, cancel and download it again from the official repository.
 
 ## First launch
 
-Focus Timer asks where it should save your completed sessions.
+The first time you open Focus Timer, it asks where to save your completed sessions.
 
-1. Select **Choose data folder**.
+1. Click **Choose data folder**.
 2. In Documents, create a new folder named `Focus Timer Sessions`.
-3. Select that folder.
+3. Choose that folder.
 
-Use a dedicated empty folder. Focus Timer adds a small setup file and stores each day's completed sessions there as readable Markdown.
+Use a new, empty folder just for Focus Timer. The app adds a small setup file and saves each day's sessions there as Markdown.
 
-Nothing is uploaded. You own this folder and can open or back it up whenever you want.
+Focus Timer does not upload these files. You can open or back up the folder whenever you want.
 
 ## Start a timer
 
@@ -50,13 +50,13 @@ Nothing is uploaded. You own this folder and can open or back it up whenever you
 2. Choose a duration from 1 to 240 minutes.
 3. Select **Start**.
 
-Select the clock to pause or resume. The three-dot menu contains the other controls and settings.
+Click the clock to pause or resume. Open the three-dot menu for the other controls and settings.
 
-When the timer ends, you can write what you accomplished or select **Skip & save**. The session is saved to a file named like `2026-10-14.md` in your data folder.
+When the timer ends, write what you accomplished or click **Skip & save**. Focus Timer saves the session to a file named like `2026-10-14.md` in your data folder.
 
 ## Portable version
 
-Use the portable ZIP only if you do not want to install the app.
+If you do not want to install the app, use the portable ZIP instead.
 
 1. From the release's **Assets**, download the file ending in `windows-x64.zip`.
 2. Right-click the ZIP and select **Extract All**.
@@ -67,7 +67,7 @@ Keep the whole extracted folder together. Do not run the app from inside the ZIP
 
 ## Find or back up your sessions
 
-Open the three-dot menu, select **Settings**, then select **Open data folder**.
+Open the three-dot menu, click **Settings**, then click **Open data folder**.
 
 Back up that entire folder. Do not delete `.focus-timer-folder.json`; it identifies the folder as a Focus Timer data folder.
 
@@ -75,7 +75,7 @@ Back up that entire folder. Do not delete `.focus-timer-folder.json`; it identif
 
 1. Open Windows **Settings**.
 2. Go to **Apps** > **Installed apps**.
-3. Find **Focus Timer**, open its menu, and select **Uninstall**.
+3. Find **Focus Timer**, open its menu, and click **Uninstall**.
 
 Uninstalling the app does not delete the session Markdown files in the data folder you chose.
 
