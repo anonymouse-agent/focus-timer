@@ -21,7 +21,7 @@ The completed domain, timing, recovery, and Markdown work from M0–M2 remains i
 ### M3R.0 — Direction and approval — COMPLETE
 
 - Review the state and four-skin concept boards in `docs/mockups/`.
-- Approve the character-as-clock hierarchy, attached-panel model, and acceptance criteria AC-045–AC-063.
+- Approve the character-as-clock hierarchy, attached-panel model, and acceptance criteria AC-045–AC-064.
 - Exit only with explicit revised Gate B–D approval.
 
 ### M3R.1 — Electron feasibility spike — IMPLEMENTED; MANUAL MATRIX PENDING
@@ -63,6 +63,6 @@ Add native notifications, independent sound, notification activation, power-resu
 
 ## M5 — Hardening and release
 
-Run failure injection, performance profiling, accessibility review, network verification, randomized transitions, and real-time soak. Produce Windows x64 folder/ZIP, checksum, usage instructions, backup guidance, known limitations, and an evidence matrix for AC-001–AC-063.
+Run failure injection, performance profiling, accessibility review, network verification, randomized transitions, and real-time soak. Produce a Windows x64 assisted installer and portable ZIP, checksums, usage instructions, backup guidance, known limitations, and an evidence matrix for AC-001–AC-064.
 
 Manual acceptance and the eight-hour soak remain release gates even when the implementation and automated suite are complete. The pre-redesign ZIP is superseded and must not be presented as the character-first release.

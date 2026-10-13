@@ -70,6 +70,7 @@ Status: **CONFIRMED** (Gate D character-first revision approved, 2026-10-13)
 | AC-062 | FR-005 | A new profile starts with always-on-top enabled and a visibly labelled `PIN` control; turning it off or on persists across restart without migration overriding an existing choice. |
 
 | AC-063 | FR-029 | Successful command feedback disappears within three seconds, repeated messages restart that interval, and feedback never intercepts clicks; error feedback remains readable for six seconds. |
+| AC-064 | NFR-014 | Packaging produces an x64 assisted current-user installer and a portable ZIP with matching SHA-256 checksums and bundled code/art licenses. A normal install creates working Start menu and desktop shortcuts, launches the app, and uninstalls cleanly without deleting the selected Markdown folder, settings, or unresolved-session recovery state. |
 
 ## Automated strategy
 
@@ -90,19 +91,20 @@ Status: **CONFIRMED** (Gate D character-first revision approved, 2026-10-13)
 - Resource profiling and runtime network tracing.
 - Eight-hour Windows soak including suspend/resume and forced process termination.
 
-Release requires recorded evidence for AC-001–AC-063; tests that require real Windows conditions cannot be replaced by unit assertions.
+Release requires recorded evidence for AC-001–AC-064; tests that require real Windows conditions cannot be replaced by unit assertions.
 
-## Evidence snapshot — 2026-10-13
+## Evidence snapshot — 2026-10-14
 
 - PASS: TypeScript checks for main, preload, shared core, and renderer.
-- PASS: 49 automated tests across validation, reducer behavior, timing/recovery decisions, Markdown serialization/idempotency, folder ownership, atomic state backup, corrupt-primary recovery, Unicode, midnight naming, presentation-mode derivation, compact-anchor window geometry, four-skin geometry (including face-clear core constraints), transient feedback timing, pinned first-launch defaults, settings migration, and a deterministic 10,000-transition invariant run.
+- PASS: 50 automated tests across validation, reducer behavior, timing/recovery decisions, Markdown serialization/idempotency, folder ownership, atomic state backup, corrupt-primary recovery, Unicode, midnight naming, presentation-mode derivation, compact-anchor window geometry, four-skin geometry (including face-clear core constraints), transient feedback timing, pinned first-launch defaults, settings migration, package configuration, and a deterministic 10,000-transition invariant run.
 - PASS: Production main/preload/renderer bundles build and real Electron launches confirm the preload API, mounted React root, character shell, clock core, menu, and contextual-control semantics.
 - PASS: Native compact-window captures exist for all four skins plus the running avocado state. Corner pixels have zero alpha; captures are 320×400 logical pixels on the 125% reference display.
 - PASS: The approved four-pose artwork is consumed through 512×512 nearest-neighbor production sprite sheets; task, time, state, and control text remain semantic HTML.
 - PASS: The packaged `Focus Timer.exe` launches and completes the smoke path with exit code 0.
 - PASS: Production dependency audit reports zero known vulnerabilities; full development audit has the documented moderate electron-builder transitive finding without an upstream fix.
 - PASS: Static source scan finds no runtime HTTP, fetch, XHR, or WebSocket call sites; Chromium background networking is disabled and non-local requests are blocked at the session layer.
-- PASS: ZIP SHA-256 verification matches its companion checksum file.
+- PASS: Installer and ZIP SHA-256 verification matches their companion checksum files.
+- PASS: The assisted installer completes as a current-user install, creates working Start menu and desktop shortcuts, launches the installed app through its smoke path, and uninstalls cleanly. The validation leaves isolated recovery/settings and Markdown-history markers untouched.
 - PENDING MANUAL: Windows notification activation, audible alert, Narrator, keyboard traversal, high contrast, reduced motion, 200% scaling, suspend/resume, restricted-folder failure injection, performance profiling, runtime network tracing, forced process crash matrix, and the eight-hour real-time soak.
 
-This evidence applies to the character-first development candidate. Automated portions of AC-045–AC-063 pass. Updated native captures validate the face-first hierarchy, friendly expressions, clock-rim menu trigger, and horizontal controls shelf. Pointer dragging, DPI/display transitions, Narrator, high contrast, reduced motion, and complete keyboard traversal remain manual release evidence rather than being inferred from unit assertions.
+This evidence applies to the character-first development candidate. Automated portions of AC-045–AC-064 pass. Updated native captures validate the face-first hierarchy, friendly expressions, clock-rim menu trigger, and horizontal controls shelf. Pointer dragging, DPI/display transitions, Narrator, high contrast, reduced motion, and complete keyboard traversal remain manual release evidence rather than being inferred from unit assertions.

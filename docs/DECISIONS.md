@@ -19,7 +19,7 @@ Status: living record
 | DEC-013 | CONFIRMED | Subtle focusing/completion animation is allowed and honors reduced motion. |
 | DEC-014 | CONFIRMED | Electron memory target is ≤300 MB during the reference run; the two-second startup target remains. |
 | DEC-015 | CONFIRMED | No updater or runtime network. Electron security updates require explicit rebuilds and releases. |
-| DEC-016 | CONFIRMED | Unsigned portable folder and ZIP are the initial distribution. Signing/installer work is deferred. |
+| DEC-016 | SUPERSEDED | Unsigned portable folder and ZIP were the initial distribution plan. DEC-034 adds an installer for non-programmers. |
 | DEC-017 | CONFIRMED | Supersede DEC-012's pixel-art card: the compact product is a transparent timer-character with no persistent opaque card or conventional title bar. This corrects the mismatch between “mascot in an app” and “character as the app.” |
 | DEC-018 | CONFIRMED | Duration/countdown and Start/Pause/Resume live inside each skin's clock-core region. The editable task is a one-line tab immediately above the idle character. |
 | DEC-019 | SUPERSEDED | The original ordinary-hover reveal is replaced by DEC-026 after visual review showed that incidental hover made the compact character unnecessarily busy. |
@@ -38,6 +38,7 @@ Status: living record
 | DEC-032 | CONFIRMED | Preserve the current avatar, clock-core, and countdown sizes. Any future improvement to body integration must come from per-skin placement and must retain face clearance and timer legibility. |
 
 | DEC-033 | CONFIRMED | Treat command confirmations as transient, click-through feedback rather than durable UI. Successes dismiss after 2.4 seconds; errors remain for 6 seconds, while durable failure states continue to use the attached panel. |
+| DEC-034 | CONFIRMED | Distribute the beta as an assisted, current-user NSIS installer plus a portable ZIP. The installer defaults to no-admin per-user installation, permits choosing the install directory, creates Start menu and desktop shortcuts, bundles code/art licenses, and must leave Markdown history, settings, and recovery state untouched on uninstall. Signing and automatic updates remain deferred. |
 
 ## Source note
 

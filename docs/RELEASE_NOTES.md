@@ -1,4 +1,4 @@
-# Focus Timer 0.1.0 — Development Candidate
+# Focus Timer 0.1.0-beta.1 — Development Candidate
 
 This build implements the MVP but is not yet designated a public release because the manual AC-034–AC-042 release evidence is incomplete.
 
@@ -17,11 +17,12 @@ This build implements the MVP but is not yet designated a public release because
 - User-selected, append-only Markdown v1 history with UUID idempotency.
 - Local notification, sound, pinning, settings, close warning, and single-instance behavior.
 - Runtime network blocking and sandboxed renderer boundary.
+- Assisted current-user Windows installer and portable ZIP, with code and artwork license notices bundled in both.
 
 ## Known limitations
 
-- The ZIP is unsigned and may trigger Microsoft Defender SmartScreen reputation warnings.
-- No installer or automatic updater is included.
+- The installer and portable ZIP are unsigned and may trigger Microsoft Defender SmartScreen reputation warnings.
+- No automatic updater is included.
 - The app cannot deliver an on-time alert after the user exits it; unresolved state is restored next launch.
 - External sync tools can contend with Markdown writes; such failures are shown for retry.
 - Fully transparent pixels are not click-through in the MVP. The window is tightly bounded to limit invisible interception; experimental shaped-window APIs are intentionally not used.

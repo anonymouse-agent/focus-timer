@@ -6,7 +6,7 @@ Status: **CONFIRMED** (Gate C character-first revision approved, 2026-10-13)
 
 - Electron 44, TypeScript 5.9, React 19, Vite 7 through electron-vite.
 - Vitest for deterministic domain and contract tests.
-- electron-builder for Windows x64 directory and ZIP artifacts.
+- electron-builder for Windows x64 NSIS installer and ZIP artifacts.
 - No database, dependency-injection framework, state framework, background process, native extension, telemetry, updater, or runtime network service.
 
 Versions are exact-pinned in `package.json`/lockfile and may be updated only with verification.
@@ -96,4 +96,4 @@ Electron's per-user single-instance lock elects the owner. A secondary launch se
 
 ## Packaging
 
-The release is unsigned and may trigger Windows reputation warnings. Code signing and an installer are deferred. The ZIP includes usage, backup, and limitation notes plus a separately generated SHA-256 file.
+The beta release is unsigned and may trigger Windows reputation warnings. electron-builder produces an assisted NSIS installer for the current user and a portable ZIP. The installer does not remove Electron user data or the user-selected Markdown folder during uninstall. Both packages include usage, backup, limitation, code-license, and artwork-license notes and receive separately generated SHA-256 files. Code signing and automatic updates are deferred.

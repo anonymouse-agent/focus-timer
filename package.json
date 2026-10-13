@@ -1,9 +1,15 @@
 {
   "name": "focus-timer",
-  "version": "0.1.0",
+  "version": "0.1.0-beta.1",
   "private": true,
   "description": "A trustworthy, local-first Windows focus timer.",
   "license": "MIT",
+  "author": "anonymouse-agent",
+  "homepage": "https://github.com/anonymouse-agent/focus-timer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anonymouse-agent/focus-timer.git"
+  },
   "main": "out/main/index.js",
   "type": "module",
   "scripts": {
@@ -12,7 +18,7 @@
     "typecheck": "tsc --noEmit -p tsconfig.node.json && tsc --noEmit -p tsconfig.web.json",
     "test": "vitest run --configLoader runner",
     "test:watch": "vitest --configLoader runner",
-    "package:win": "npm run build && electron-builder --win dir zip --config.electronDist=node_modules/electron/dist",
+    "package:win": "npm run build && electron-builder --win --x64 --config.electronDist=node_modules/electron/dist",
     "verify": "npm run typecheck && npm test && npm run build"
   },
   "dependencies": {
@@ -50,13 +56,25 @@
       {
         "from": "docs/RELEASE_NOTES.md",
         "to": "RELEASE_NOTES.md"
+      },
+      {
+        "from": "LICENSE",
+        "to": "LICENSE"
+      },
+      {
+        "from": "ASSET_LICENSE.md",
+        "to": "ASSET_LICENSE.md"
+      },
+      {
+        "from": "LICENSES/CC-BY-4.0.txt",
+        "to": "LICENSES/CC-BY-4.0.txt"
       }
     ],
     "win": {
       "icon": "build/icon.png",
       "target": [
         {
-          "target": "dir",
+          "target": "nsis",
           "arch": ["x64"]
         },
         {
@@ -65,6 +83,17 @@
         }
       ],
       "artifactName": "Focus-Timer-${version}-windows-${arch}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "selectPerMachineByDefault": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Focus Timer",
+      "runAfterFinish": true,
+      "artifactName": "Focus-Timer-Setup-${version}-windows-${arch}.${ext}"
     }
   },
   "engines": {

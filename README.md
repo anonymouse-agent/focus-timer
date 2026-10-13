@@ -10,9 +10,9 @@ Focus Timer is a small Windows focus timer. The character is the clock, not deco
 
 ## Download
 
-There is no public download yet. Tested Windows builds will be published on the GitHub Releases page.
+Beta downloads will be published on the [GitHub Releases page](https://github.com/anonymouse-agent/focus-timer/releases). For most people, the `Focus-Timer-Setup` `.exe` is the simplest option. A portable ZIP is also provided.
 
-The finished app will not require Node.js, npm, Git, or a GitHub account.
+Neither build requires Node.js, npm, Git, or a GitHub account. Current beta builds are unsigned, so Windows may show a SmartScreen warning.
 
 ## Features
 
@@ -65,11 +65,11 @@ npm run dev
 npm run package:win
 ```
 
-Build output is written to `release/` and is not committed to Git. Current builds are unsigned, so Windows may show a SmartScreen warning.
+Build output is written to `release/` and is not committed to Git. It includes an assisted current-user installer and a portable ZIP. Current builds are unsigned, so Windows may show a SmartScreen warning.
 
 ## Tests
 
-`npm run verify` runs TypeScript checks, 49 automated tests, and a production build.
+`npm run verify` runs TypeScript checks, 50 automated tests, and a production build.
 
 Manual Windows checks are tracked in [docs/ACCEPTANCE_TESTS.md](docs/ACCEPTANCE_TESTS.md). They include accessibility, notifications, sleep/wake behavior, performance, network tracing, recovery testing, and an eight-hour soak.
 

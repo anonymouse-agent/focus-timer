@@ -17,7 +17,7 @@ Status: **CONFIRMED** (Gate C character-first revision approved, 2026-10-13)
 | NFR-011 | Renderer sandboxing, context isolation, disabled Node integration, restrictive CSP, validated IPC inputs, and navigation denial are mandatory. |
 | NFR-012 | All durable formats are versioned and forward incompatibility fails visibly without destructive migration. |
 | NFR-013 | Animation uses low frame rates and is disabled when reduced motion is requested. |
-| NFR-014 | The distributable is a self-contained unsigned Windows x64 folder and ZIP with SHA-256 checksum and no installer requirement. |
+| NFR-014 | Release artifacts are a self-contained unsigned Windows x64 assisted installer and portable ZIP, each with a SHA-256 checksum. The default current-user install requires no administrator access, and uninstall never deletes the selected Markdown folder, settings, or unresolved-session recovery data. |
 | NFR-015 | Compact mode has no opaque bounding rectangle at 100%, 150%, or 200% Windows scaling; the character and primary controls remain unclipped. |
 | NFR-016 | Every primary or secondary control has a semantic role, accessible name, keyboard path, and a visible focus treatment independent of the artwork. |
 | NFR-017 | Window restoration, expansion, display removal, and DPI changes keep the character and its menu reachable in a visible work area. |

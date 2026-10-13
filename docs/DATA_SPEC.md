@@ -54,7 +54,7 @@ Existing unknown content after a valid header is preserved. Finalized records ar
 - **Focused seconds:** 1500
 - **Paused seconds:** 0
 - **Recovery:** `none`
-- **App version:** `0.1.0`
+- **App version:** the application version string, for example `0.1.0-beta.1`
 
 ### Accomplishment
 
