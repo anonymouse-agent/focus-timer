@@ -6,13 +6,21 @@ Focus Timer is a small Windows focus timer. The character is the clock, not deco
 |---|---|
 | ![Focus Timer ready to start](docs/images/focus-timer-idle.png) | ![Focus Timer running](docs/images/focus-timer-running.png) |
 
-> Status: private beta. The core timer and local Markdown storage work, but the Windows release still needs manual accessibility, notification, sleep/wake, and soak testing.
+> Status: public beta. The core timer and local Markdown storage work, but the Windows release still needs manual accessibility, notification, sleep/wake, and soak testing.
 
-## Download
+## Install in a few minutes
 
-Download the current beta from the [GitHub Releases page](https://github.com/anonymouse-agent/focus-timer/releases). For most people, the `Focus-Timer-Setup` `.exe` is the simplest option. A portable ZIP is also provided.
+You do not need Node.js, Git, a GitHub account, or any programming experience.
 
-Neither build requires Node.js, npm, Git, or a GitHub account. Current beta builds are unsigned, so Windows may show a SmartScreen warning.
+1. Open the [Focus Timer releases page](https://github.com/anonymouse-agent/focus-timer/releases).
+2. Open the newest release and find **Assets**.
+3. Download the file that starts with `Focus-Timer-Setup` and ends with `.exe`.
+4. Open the downloaded file and follow the installer. The default options are fine.
+5. Start **Focus Timer** from the Start menu or desktop shortcut.
+
+The current beta is not code-signed yet. If Windows shows **Windows protected your PC**, first confirm that the download came from this GitHub repository. Then select **More info** followed by **Run anyway**.
+
+For first-run help, portable setup, and uninstall steps, see [Getting started](GETTING_STARTED.md).
 
 ## Features
 
@@ -26,16 +34,18 @@ Neither build requires Node.js, npm, Git, or a GitHub account. Current beta buil
 - Independent sound and Windows notification settings
 - No account, sync, telemetry, or runtime network access
 
-## Using the app
+## Start your first focus session
 
-1. Launch Focus Timer.
-2. Choose an empty folder for your session records.
-3. Enter a task and duration.
-4. Select **Start**.
-5. Use the clock to pause or resume.
-6. When the timer ends, optionally record what you finished.
+1. Select **Choose data folder**.
+2. Create a new folder such as `Documents\Focus Timer Sessions`, then select it.
+3. Enter what you want to focus on.
+4. Choose the number of minutes and select **Start**.
+5. Select the clock to pause or resume.
+6. When time is up, add an optional accomplishment note or skip it.
 
-The app stores completed sessions in `YYYY-MM-DD.md` files. These are normal UTF-8 Markdown files and do not require Focus Timer to read.
+That is all the setup required. Focus Timer remembers the folder and your settings for next time.
+
+Completed sessions are saved in files such as `2026-10-14.md`. They are normal Markdown files that can be opened with Notepad or any text editor.
 
 ## Data and privacy
 
