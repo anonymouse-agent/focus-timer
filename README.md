@@ -1,52 +1,91 @@
 # Focus Timer
 
-A compact, local-first Windows focus timer where the pixel character is the clock. Focus Timer is inspired by the simplicity of Tina Huang's Pixel Pomodoro demonstration, but uses original artwork and a reliability-focused implementation.
+Focus Timer is a small Windows focus timer. The character is the clock, not decoration around a separate timer window.
 
-## What works
+| Ready | Focusing |
+|---|---|
+| ![Focus Timer ready to start](docs/images/focus-timer-idle.png) | ![Focus Timer running](docs/images/focus-timer-running.png) |
 
-- 1–240 minute named sessions
-- Pause, resume, confirmed cancellation, and confirmed early finish
-- Authoritative main-process timing that counts Windows sleep while running
-- Recovery after exit, crash, or reboot, including visible clock-conflict resolution
-- Optional accomplishment notes and append-only daily Markdown
-- Exactly-once record retry using stable UUID markers
-- Transparent, character-first desktop interface with the clock embedded in the character
-- Avocado, cat, dog, and tomato timer skins
-- Contextual controls and attached panels instead of a persistent application card
+> Status: private beta. The core timer and local Markdown storage work, but the Windows release still needs manual accessibility, notification, sleep/wake, and soak testing.
+
+## Download
+
+There is no public download yet. Tested Windows builds will be published on the GitHub Releases page.
+
+The finished app will not require Node.js, npm, Git, or a GitHub account.
+
+## Features
+
+- Named focus sessions from 1 to 240 minutes
+- Pause, resume, cancel, and finish early
+- Avocado, cat, dog, and tomato characters
+- Always-on-top mode, enabled by default
+- Recovery after an exit, crash, or restart
+- Optional accomplishment notes
+- Append-only daily Markdown files
 - Independent sound and Windows notification settings
-- Remembered always-on-top mode and single-instance activation
-- Fully offline runtime with a sandboxed renderer
+- No account, sync, telemetry, or runtime network access
+
+## Using the app
+
+1. Launch Focus Timer.
+2. Choose an empty folder for your session records.
+3. Enter a task and duration.
+4. Select **Start**.
+5. Use the clock to pause or resume.
+6. When the timer ends, optionally record what you finished.
+
+The app stores completed sessions in `YYYY-MM-DD.md` files. These are normal UTF-8 Markdown files and do not require Focus Timer to read.
+
+## Data and privacy
+
+Session history belongs to the user. Focus Timer never edits or deletes a finalized session record.
+
+Back up the folder selected during setup. App settings and unfinished-session recovery data are stored under `%LOCALAPPDATA%\FocusTimer`.
+
+Do not edit `focus-timer:session` markers while a failed save is waiting to be retried. The app blocks uncertain writes instead of risking a duplicate record.
 
 ## Development
 
-Requirements: Windows 11 x64, Node.js 24+, npm 11+.
+Requirements:
+
+- Windows 11 x64
+- Node.js 24 or later
+- npm 11 or later
 
 ```powershell
-npm install
+npm ci
 npm run verify
 npm run dev
 ```
 
-The first launch asks for an empty dedicated folder. That folder contains `.focus-timer-folder.json` and daily `YYYY-MM-DD.md` files. Internal recovery and settings use `%LOCALAPPDATA%\FocusTimer`.
-
-## Build
+## Build for Windows
 
 ```powershell
 npm run package:win
 ```
 
-Artifacts are written to `release/`. The initial package is unsigned, so Windows may show a reputation warning. It includes no updater and makes no runtime network requests.
+Build output is written to `release/` and is not committed to Git. Current builds are unsigned, so Windows may show a SmartScreen warning.
 
-## Backups and ownership
+## Tests
 
-Back up the selected data folder with any file-copy tool you trust. Finalized records are ordinary UTF-8 Markdown and do not require Focus Timer to read them. The app never edits or deletes a finalized session section.
+`npm run verify` runs TypeScript checks, 49 automated tests, and a production build.
 
-Do not manually alter a session's `focus-timer:session` markers while a save is being retried. Partial or duplicated matching markers intentionally stop automatic append so data cannot be silently duplicated.
+Manual Windows checks are tracked in [docs/ACCEPTANCE_TESTS.md](docs/ACCEPTANCE_TESTS.md). They include accessibility, notifications, sleep/wake behavior, performance, network tracing, recovery testing, and an eight-hour soak.
 
-## Verification status
+## Project layout
 
-Forty-three automated domain, timing, Markdown, filesystem-contract, presentation, settings-migration, typecheck, production-build, and Electron startup checks are included. Manual Windows accessibility, notification activation, resource profiling, runtime network tracing, crash injection, and the eight-hour soak remain release-candidate gates; see [`docs/ACCEPTANCE_TESTS.md`](docs/ACCEPTANCE_TESTS.md).
+- `src/core` - domain rules, validation, timing, and Markdown formatting
+- `src/main` - persistence, filesystem access, timing, and Windows integration
+- `src/preload` - restricted Electron IPC bridge
+- `src/renderer` - React UI
+- `tests` - automated tests
+- `docs` - product, behavior, data, architecture, and acceptance specs
 
-## Security note
+## Inspiration
 
-The renderer has no Node.js or filesystem access. All privileged commands pass through a narrow preload bridge and are validated again in the main process. No remote content is loaded. Dependency audit findings and release limitations are recorded in [`docs/RELEASE_NOTES.md`](docs/RELEASE_NOTES.md).
+The compact workflow was inspired by Tina Huang's Pixel Pomodoro demonstration. Focus Timer is an independent implementation with original code and original character artwork. It is not affiliated with or endorsed by Tina Huang.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md). Please report security issues through the private process in [SECURITY.md](SECURITY.md).

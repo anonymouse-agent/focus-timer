@@ -8,3 +8,14 @@ artifacts/
 *.log
 .DS_Store
 Data/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Signing credentials and private keys
+*.pfx
+*.p12
+*.pem
+*.key
