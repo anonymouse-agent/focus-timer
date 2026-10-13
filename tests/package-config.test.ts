@@ -3,6 +3,7 @@ import { describe, expect, it } from 'vitest';
 
 interface PackageConfig {
   version: string;
+  scripts: { 'package:win': string };
   build: {
     extraFiles: Array<{ from: string; to: string }>;
     win: { target: Array<{ target: string; arch: string[] }> };
@@ -23,6 +24,8 @@ describe('Windows package configuration', () => {
     ) as PackageConfig;
 
     expect(config.version).toBe('0.1.0-beta.1');
+    expect(config.scripts['package:win']).toContain('--publish never');
+    expect(config.scripts['package:win']).not.toContain('electronDist');
     expect(config.build.win.target).toEqual([
       { target: 'nsis', arch: ['x64'] },
       { target: 'zip', arch: ['x64'] },

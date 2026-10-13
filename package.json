@@ -18,7 +18,7 @@
     "typecheck": "tsc --noEmit -p tsconfig.node.json && tsc --noEmit -p tsconfig.web.json",
     "test": "vitest run --configLoader runner",
     "test:watch": "vitest --configLoader runner",
-    "package:win": "npm run build && electron-builder --win --x64 --config.electronDist=node_modules/electron/dist",
+    "package:win": "npm run build && electron-builder --win --x64 --publish never",
     "verify": "npm run typecheck && npm test && npm run build"
   },
   "dependencies": {
