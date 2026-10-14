@@ -1,12 +1,16 @@
-# Focus Timer
+# Focus Timer — a Pomodoro-style timer for Windows
 
-Focus Timer is a simple Windows timer for focused work. Enter a task, choose how long you want to focus, and start the timer. A small character shows how much time is left while you use other apps.
+Focus Timer is a small, open-source desktop timer for focused work. Pick an avocado, tomato, cat, or dog character, name your task, and start a focus session. The character becomes the countdown clock and stays above your other windows while you work.
 
 | Ready | Focusing |
 |---|---|
-| ![Focus Timer ready to start](docs/images/focus-timer-idle.png) | ![Focus Timer running](docs/images/focus-timer-running.png) |
+| ![Avocado Pomodoro timer ready to start on Windows](docs/images/focus-timer-idle.png) | ![Avocado focus timer counting down above other Windows apps](docs/images/focus-timer-running.png) |
 
 > This is an early public beta. The timer and Markdown saving work, but I am still testing accessibility, notifications, sleep and wake behavior, and long-running sessions.
+
+## Why I built it
+
+I wanted a Pomodoro timer that stayed visible without turning into a larger productivity system. Tina Huang's Pixel Pomodoro inspired the character-first idea: the character carries the timer instead of sitting beside a separate clock. I also wanted to own the session history, so the app saves completed sessions as ordinary Markdown files.
 
 ## Install in a few minutes
 
